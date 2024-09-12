@@ -1,0 +1,29 @@
+class Solution {
+    public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
+                ArrayList<Boolean> list =  new ArrayList<Boolean>();
+                int b=0;
+for(int a=0;a<candies.length; a++)
+{
+
+    int c= candies[a]+extraCandies;
+    for(int i=0;i<candies.length;i++)
+    {
+        if(c<candies[i])
+        {
+            b=1;
+
+        }
+    }
+    if(b==1){
+                    list.add(false);
+
+    }
+        else{
+            list.add(true);
+        }
+        b=0;
+    
+}
+return(list);
+    }
+}
